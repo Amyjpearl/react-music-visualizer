@@ -2,7 +2,7 @@
 
 ## Packages to install: 
 
-### 'npm install -S spotify-web-api-js'
+### `npm install -S spotify-web-api-js`
 
 ## Available Scripts
 
