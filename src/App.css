@@ -1,38 +1,126 @@
 .App {
+  font-family: "Roboto";
+  background-color: #030303;
   text-align: center;
+  height: 150vh;
+  min-height: 150vh;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.clearfix {
+  overflow: auto;
 }
 
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
+  text-align: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  font-size: calc(8px + 1.25vmin);
+  color: #15d0ff;
+  padding-left: 5vw;
+}
+
+.App-header img {
+  width: 50px;
+  padding-top: 2vw;
+  padding-right: 5vw;
+  margin-left: auto;
 }
 
 .App-link {
   color: #61dafb;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.Sub-header h2 {
+  color: hsl(219, 100%, 58%)
+}
+
+.Sub-header h1 {
+  color: #5315ff
+}
+
+.Main-panel {
+  width: 86%;
+  margin: auto;
+  align-items: center;
+  background-color: #565555 ;
+  display: flex;
+  padding: 2%;
+}
+
+.Visualizer {
+  flex: 70%;
+  padding: 5px;
+  margin: auto;
+}
+
+.Visualizer img {
+  width: 95%;
+  border: 5px solid white;
+}
+
+.Equalizer {
+  flex: 15%;
+  padding: 5px;
+  margin: auto;
+  align-items: center;
+}
+
+.Equalizer img {
+  width: 100%;
+}
+
+.Button-column {
+  flex: 15%;
+  margin: auto;
+  align-items: center;
+}
+
+button {
+  font-family: "Roboto";
+  display: block;
+  padding: 12%;
+  margin-top: 20%;
+  margin-bottom: 10%;
+  font-size: calc(4px + 1.75vmin);
+  border: 3px solid #15d0ff;
+  border-radius: 50px;
+}
+
+.Volume-panel {
+  width: 94%;
+  margin: auto;
+  margin-top: 2%;
+  align-items: center;
+  display: flex;
+}
+
+.Volume {
+  flex: 40%;
+  margin-left: 10%;
+  padding: 5px;
+  margin: 2%;
+  align-items: center;
+  background-color: #E9E9E9;
+  border-radius: 20px;
+}
+
+.Volume img {
+  width: 80%;
+}
+
+.Control-holder {
+  background-color: #E9E9E9;
+  flex: 20%;
+  border-radius: 20px;
+  margin: 2%;
+}
+
+.Control-holder img{
+  padding: 5%;
+  width: 20%;
+}
+
+@media screen and (min-width: 415px){
 }
