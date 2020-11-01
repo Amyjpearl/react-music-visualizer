@@ -1,19 +1,31 @@
 .App {
   background-color: #1f1f1f;
   text-align: center;
-  min-height: 100vmin;
+  height: 100vh;
+  min-height: 100vh;
 }
 
 .App-header {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
+  text-align: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  font-size: calc(8px + 2vmin);
   color: #15d0ff;
+  padding-left: 5vw;
+  padding-right: 5vw;
+}
+
+.App-header img {
+  padding-top: 2vw;
+  margin-left: auto;
 }
 
 .App-link {
   color: #61dafb;
 }
 
+@media screen and (min-width: 415px){
+
+}
