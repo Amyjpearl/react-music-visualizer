@@ -1,6 +1,5 @@
 import './App.css';
 import React, { Component } from 'react';
-import Button from '@material-ui/core/Button';
 
 import MusicNote from "./assets/music-note.png";
 import VisualizerPlaceholder from "./assets/visualizer-placeholder.png";
@@ -20,20 +19,20 @@ class App extends Component {
           <img src={MusicNote} alt="Spotify Note" />
         </header>
         <div className="Sub-header">
-          <h1 className="Song-title">{SongTitle}</h1>
+          <h1>{SongTitle}</h1>
           <h2>{ArtistTitle}</h2>
         </div>
         <div className= "Main-panel">
           <div className= "Button-column">
-            <Button variant="contained" color="primary">
+            <button>
               Spheres
-            </Button>
-            <Button variant="contained" color="primary">
+            </button>
+            <button>
               Bars
-            </Button>
-            <Button variant="contained" color="primary">
+            </button>
+            <button>
               Equalizer
-            </Button>
+            </button>
           </div>
           <div className="Visualizer">
             <img src={VisualizerPlaceholder} alt="Visualizer"/>

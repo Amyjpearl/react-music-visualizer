@@ -3,7 +3,7 @@
   background-color: #1f1f1f;
   text-align: center;
   height: 100vh;
-  min-height: 100vh;
+  min-height: 150vh;
 }
 
 .clearfix {
@@ -32,12 +32,19 @@
   color: #61dafb;
 }
 
+.Sub-header h2{
+  color: hsl(219, 100%, 58%)
+}
+
+.Sub-header h1{
+  color: #5315ff
+}
+
 .Main-panel {
-  width: 90%;
+  width: 87%;
   margin: auto;
   align-items: center;
-  background-color: #636363 ;
-  margin-top: 3vw;
+  background-color: #565555 ;
   display: flex;
   padding: 2%;
 }
@@ -45,23 +52,19 @@
 .Visualizer {
   flex: 70%;
   padding: 5px;
-  background-color: pink;
   margin: auto;
-  margin-top: 2vw;
 }
 
 .Visualizer img{
-  width: 90%;
+  width: 95%;
   border: 5px solid white;
 }
 
 .Equalizer {
   flex: 15%;
   padding: 5px;
-  background-color: green;
   margin: auto;
   align-items: center;
-  margin-top: 2vw;
 }
 
 .Equalizer img {
@@ -70,13 +73,16 @@
 
 .Button-column {
   flex: 15%;
-  padding: 2%;
-  background-color: blue;
+  padding: 5px;
   margin: auto;
   align-items: center;
-  margin-top: 15%;
 }
 
+button {
+  display: block;
+  padding: 10%;
+  margin-top: 20%;
+  margin-bottom: 10%;
+  font-size: calc(6px + 2vmin);}
 @media screen and (min-width: 415px){
-
 }
