@@ -1,3 +1,4 @@
+/* eslint-disable no-template-curly-in-string */
 import './App.css';
 import React, { Component } from 'react';
 
@@ -23,7 +24,7 @@ class App extends Component {
     super();
     this.state = {
       Authenticated: false,
-      artistCollection: null,
+      trackCollection: null,
       SongTitle: "No Song Selected",
       ArtistTitle: "No Artist",
     }
@@ -79,7 +80,8 @@ class App extends Component {
         */}
         <div className="debug">
           access_token: {this.state.accessToken ?? "Not Authenticated"}<br/>
-          artists: {this.GetArtists()}
+          tracks: {this.GetTracks()}<br/>
+          song play: {this.state.song}
         </div>
       </div>
     );
@@ -101,24 +103,31 @@ class App extends Component {
       if (!error && response.statusCode === 200) {
         this.setState({ accessToken: body.access_token, Authenticated: true });
         spotifyApi.setAccessToken(this.state.accessToken);
-        spotifyApi.searchArtists('Alan Parsons').then(function(data) {
-          this.setState({artistCollection: data});
+        spotifyApi.searchTracks('Alan Parsons').then(function(data) {
+          this.setState({trackCollection: data});
         }.bind(this));
       }
     });
   }
 
-  GetArtists()
-  {
-    if (this.state.artistCollection == null)
-      return "No Artists found";
-    console.log(this.state.artistCollection);
-    return this.state.artistCollection.artists.items.length;
+  GetTracks() {
+    if (this.state.trackCollection == null)
+      return "No Tracks found";
+    console.log(this.state.trackCollection.tracks.items);
+    return this.state.trackCollection.tracks.items.length;
   }
 
-  PlayClicked()
-  {
-    this.setState({ SongTitle: "New Song" });
+  PlayClicked() {
+    if (this.state.trackCollection != null) {
+      var tracks = this.state.trackCollection.tracks.items;
+      if (tracks.length > 0) {
+        var track = tracks[0];
+        var artist = track.artists[track.artists.length - 1];
+        this.setState({ SongTitle: track.name, ArtistTitle: artist.name });
+        this.setState({ song: track.href + "&Authorization: Bearer " + this.state.accessToken });
+        spotifyApi.play();
+      };
+    }
   }
 }
 
